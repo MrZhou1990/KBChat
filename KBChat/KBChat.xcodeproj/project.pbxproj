@@ -17,6 +17,9 @@
 		38D7E33F256E9A3D0018CBCE /* KBBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E33E256E9A3D0018CBCE /* KBBaseTableView.swift */; };
 		38D7E346256E9B510018CBCE /* KBChatListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E345256E9B510018CBCE /* KBChatListController.swift */; };
 		38D7E34B256E9B980018CBCE /* KBChatRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E34A256E9B980018CBCE /* KBChatRoomController.swift */; };
+		38D7E35B2570E7400018CBCE /* KBBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E35A2570E7400018CBCE /* KBBaseTextView.swift */; };
+		38D7E35F2570E79A0018CBCE /* KBBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E35E2570E79A0018CBCE /* KBBaseView.swift */; };
+		38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E3622570E7B50018CBCE /* KBChatInputView.swift */; };
 		A6FDE889162617B32B43C78E /* Pods_KBChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,10 @@
 		38D7E345256E9B510018CBCE /* KBChatListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatListController.swift; sourceTree = "<group>"; };
 		38D7E34A256E9B980018CBCE /* KBChatRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatRoomController.swift; sourceTree = "<group>"; };
 		38D7E351256EA0700018CBCE /* KBChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KBChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		38D7E35A2570E7400018CBCE /* KBBaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBBaseTextView.swift; sourceTree = "<group>"; };
+		38D7E35E2570E79A0018CBCE /* KBBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBBaseView.swift; sourceTree = "<group>"; };
+		38D7E3622570E7B50018CBCE /* KBChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatInputView.swift; sourceTree = "<group>"; };
+		38DDF85725724B9000458DA0 /* KBChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KBChat.entitlements; sourceTree = "<group>"; };
 		49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B44E34714968DF182505CF5 /* Pods-KBChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBChat.debug.xcconfig"; path = "Target Support Files/Pods-KBChat/Pods-KBChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +79,7 @@
 		38D7E319256E96000018CBCE /* KBChat */ = {
 			isa = PBXGroup;
 			children = (
+				38DDF85725724B9000458DA0 /* KBChat.entitlements */,
 				38D7E351256EA0700018CBCE /* KBChat-Bridging-Header.h */,
 				38D7E328256E96010018CBCE /* Info.plist */,
 				38D7E31A256E96000018CBCE /* KBAppDelegate.swift */,
@@ -99,6 +107,8 @@
 			children = (
 				38D7E33A256E99700018CBCE /* KBBaseController.swift */,
 				38D7E33E256E9A3D0018CBCE /* KBBaseTableView.swift */,
+				38D7E35A2570E7400018CBCE /* KBBaseTextView.swift */,
+				38D7E35E2570E79A0018CBCE /* KBBaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				38D7E349256E9B830018CBCE /* Controller */,
+				38D7E35D2570E77C0018CBCE /* View */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -142,6 +153,14 @@
 				38D7E34A256E9B980018CBCE /* KBChatRoomController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		38D7E35D2570E77C0018CBCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38D7E3622570E7B50018CBCE /* KBChatInputView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		866D5E67D86E517498C436D7 /* Pods */ = {
@@ -279,11 +298,14 @@
 			files = (
 				38D7E346256E9B510018CBCE /* KBChatListController.swift in Sources */,
 				38D7E31F256E96000018CBCE /* KBViewController.swift in Sources */,
+				38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */,
 				38D7E33B256E99700018CBCE /* KBBaseController.swift in Sources */,
 				38D7E337256E98840018CBCE /* KBAppDelegate+Window.swift in Sources */,
 				38D7E33F256E9A3D0018CBCE /* KBBaseTableView.swift in Sources */,
+				38D7E35F2570E79A0018CBCE /* KBBaseView.swift in Sources */,
 				38D7E34B256E9B980018CBCE /* KBChatRoomController.swift in Sources */,
 				38D7E31B256E96000018CBCE /* KBAppDelegate.swift in Sources */,
+				38D7E35B2570E7400018CBCE /* KBBaseTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KBChat/KBChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24FS7QD68Q;
 				INFOPLIST_FILE = KBChat/Info.plist;
@@ -456,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KBChat/KBChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24FS7QD68Q;
 				INFOPLIST_FILE = KBChat/Info.plist;
