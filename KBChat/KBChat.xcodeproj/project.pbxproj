@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385410462591E4A50040E5E6 /* KBAppDelegate+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */; };
+		3863BF312593259E00974C3D /* Disco.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3863BF302593259E00974C3D /* Disco.caf */; };
+		3863BF35259343BB00974C3D /* call.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3863BF34259343BB00974C3D /* call.caf */; };
 		38D7E31B256E96000018CBCE /* KBAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E31A256E96000018CBCE /* KBAppDelegate.swift */; };
 		38D7E31F256E96000018CBCE /* KBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E31E256E96000018CBCE /* KBViewController.swift */; };
 		38D7E322256E96000018CBCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7E320256E96000018CBCE /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		23E568BD667A9BBFD24B78DC /* Pods-KBChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBChat.release.xcconfig"; path = "Target Support Files/Pods-KBChat/Pods-KBChat.release.xcconfig"; sourceTree = "<group>"; };
+		385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KBAppDelegate+Push.swift"; sourceTree = "<group>"; };
+		3863BF302593259E00974C3D /* Disco.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Disco.caf; sourceTree = "<group>"; };
+		3863BF34259343BB00974C3D /* call.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = call.caf; sourceTree = "<group>"; };
 		38D7E317256E96000018CBCE /* KBChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D7E31A256E96000018CBCE /* KBAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBAppDelegate.swift; sourceTree = "<group>"; };
 		38D7E31E256E96000018CBCE /* KBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3863BF2F2593258500974C3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3863BF34259343BB00974C3D /* call.caf */,
+				3863BF302593259E00974C3D /* Disco.caf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		38D7E30E256E96000018CBCE = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +98,12 @@
 				38D7E351256EA0700018CBCE /* KBChat-Bridging-Header.h */,
 				38D7E328256E96010018CBCE /* Info.plist */,
 				38D7E31A256E96000018CBCE /* KBAppDelegate.swift */,
+				385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */,
 				38D7E336256E98840018CBCE /* KBAppDelegate+Window.swift */,
 				38D7E339256E99440018CBCE /* Base */,
 				38D7E341256E9AD40018CBCE /* Classes */,
 				38D7E332256E97EF0018CBCE /* Others */,
+				3863BF2F2593258500974C3D /* Resources */,
 			);
 			path = KBChat;
 			sourceTree = "<group>";
@@ -243,6 +260,8 @@
 			files = (
 				38D7E327256E96010018CBCE /* LaunchScreen.storyboard in Resources */,
 				38D7E324256E96010018CBCE /* Assets.xcassets in Resources */,
+				3863BF312593259E00974C3D /* Disco.caf in Resources */,
+				3863BF35259343BB00974C3D /* call.caf in Resources */,
 				38D7E322256E96000018CBCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D7E346256E9B510018CBCE /* KBChatListController.swift in Sources */,
+				385410462591E4A50040E5E6 /* KBAppDelegate+Push.swift in Sources */,
 				38D7E31F256E96000018CBCE /* KBViewController.swift in Sources */,
 				38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */,
 				38D7E33B256E99700018CBCE /* KBBaseController.swift in Sources */,
@@ -458,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24FS7QD68Q;
 				INFOPLIST_FILE = KBChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24FS7QD68Q;
 				INFOPLIST_FILE = KBChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
