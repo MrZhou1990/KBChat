@@ -13,6 +13,9 @@ class KBBaseTableView: UITableView {
         super.init(frame: frame, style: style)
         backgroundColor = UIColor.white
         tableFooterView = UIView()
+        separatorStyle = .none
+        
+        
     }
     
     required init?(coder: NSCoder) {

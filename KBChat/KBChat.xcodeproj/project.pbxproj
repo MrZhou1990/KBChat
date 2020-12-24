@@ -23,6 +23,7 @@
 		38D7E35B2570E7400018CBCE /* KBBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E35A2570E7400018CBCE /* KBBaseTextView.swift */; };
 		38D7E35F2570E79A0018CBCE /* KBBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E35E2570E79A0018CBCE /* KBBaseView.swift */; };
 		38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7E3622570E7B50018CBCE /* KBChatInputView.swift */; };
+		38EF18AC25947D47003F72D8 /* UIView+KBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF18AB25947D47003F72D8 /* UIView+KBExtension.swift */; };
 		A6FDE889162617B32B43C78E /* Pods_KBChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		38D7E35E2570E79A0018CBCE /* KBBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBBaseView.swift; sourceTree = "<group>"; };
 		38D7E3622570E7B50018CBCE /* KBChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatInputView.swift; sourceTree = "<group>"; };
 		38DDF85725724B9000458DA0 /* KBChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KBChat.entitlements; sourceTree = "<group>"; };
+		38EF18AB25947D47003F72D8 /* UIView+KBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+KBExtension.swift"; sourceTree = "<group>"; };
 		49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B44E34714968DF182505CF5 /* Pods-KBChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBChat.debug.xcconfig"; path = "Target Support Files/Pods-KBChat/Pods-KBChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */,
 				38D7E336256E98840018CBCE /* KBAppDelegate+Window.swift */,
 				38D7E339256E99440018CBCE /* Base */,
+				38EF18AA25947D2B003F72D8 /* Category */,
 				38D7E341256E9AD40018CBCE /* Classes */,
 				38D7E332256E97EF0018CBCE /* Others */,
 				3863BF2F2593258500974C3D /* Resources */,
@@ -178,6 +181,14 @@
 				38D7E3622570E7B50018CBCE /* KBChatInputView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		38EF18AA25947D2B003F72D8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				38EF18AB25947D47003F72D8 /* UIView+KBExtension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		866D5E67D86E517498C436D7 /* Pods */ = {
@@ -316,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D7E346256E9B510018CBCE /* KBChatListController.swift in Sources */,
+				38EF18AC25947D47003F72D8 /* UIView+KBExtension.swift in Sources */,
 				385410462591E4A50040E5E6 /* KBAppDelegate+Push.swift in Sources */,
 				38D7E31F256E96000018CBCE /* KBViewController.swift in Sources */,
 				38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */,
