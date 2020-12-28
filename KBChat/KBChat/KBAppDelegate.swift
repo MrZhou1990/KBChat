@@ -17,13 +17,13 @@ class KBAppDelegate: UIResponder, UIApplicationDelegate {
         initWindow() // 初始化window
         registerPush() // 注册推送
         
-        if #available(iOS 11.0, *) {
-            UITableView.appearance().contentInsetAdjustmentBehavior = .never
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
-            UICollectionView.appearance().contentInsetAdjustmentBehavior = .never
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 11.0, *) {
+//            UITableView.appearance().contentInsetAdjustmentBehavior = .never
+//            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+//            UICollectionView.appearance().contentInsetAdjustmentBehavior = .never
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         return true
     }
