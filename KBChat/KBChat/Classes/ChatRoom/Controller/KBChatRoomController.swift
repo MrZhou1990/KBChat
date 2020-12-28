@@ -19,6 +19,11 @@ class KBChatRoomController: KBBaseController {
     var isScrollBottom = false
     var canHide = false
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "聊天室"
@@ -66,12 +71,5 @@ class KBChatRoomController: KBBaseController {
         let chatInputView = KBChatInputView.init(frame: CGRect.init(x: 0, y: view.height - chatInputViewHeight, width: view.width, height: chatInputViewHeight))
         return chatInputView
     }()
-    
-    
-    deinit {
-        print("聊天页面销毁")
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
 }
 

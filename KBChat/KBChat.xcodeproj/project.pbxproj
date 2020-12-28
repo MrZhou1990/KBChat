@@ -30,6 +30,7 @@
 		38EF18C3259A0834003F72D8 /* KBChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF18C2259A0834003F72D8 /* KBChatRoomCell.swift */; };
 		38EF18C6259A0922003F72D8 /* KBChatRoomFromCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF18C5259A0922003F72D8 /* KBChatRoomFromCell.swift */; };
 		38EF18C9259A0933003F72D8 /* KBChatRoomToCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF18C8259A0933003F72D8 /* KBChatRoomToCell.swift */; };
+		38EF18CE259A1C8E003F72D8 /* KBChatRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF18CD259A1C8E003F72D8 /* KBChatRoomService.swift */; };
 		A6FDE889162617B32B43C78E /* Pods_KBChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		38EF18C2259A0834003F72D8 /* KBChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatRoomCell.swift; sourceTree = "<group>"; };
 		38EF18C5259A0922003F72D8 /* KBChatRoomFromCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatRoomFromCell.swift; sourceTree = "<group>"; };
 		38EF18C8259A0933003F72D8 /* KBChatRoomToCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatRoomToCell.swift; sourceTree = "<group>"; };
+		38EF18CD259A1C8E003F72D8 /* KBChatRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBChatRoomService.swift; sourceTree = "<group>"; };
 		49AEA35CC34B43B7B0E4EBAB /* Pods_KBChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B44E34714968DF182505CF5 /* Pods-KBChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBChat.debug.xcconfig"; path = "Target Support Files/Pods-KBChat/Pods-KBChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				38D7E344256E9B3B0018CBCE /* Controller */,
+				38EF18CD259A1C8E003F72D8 /* KBChatRoomService.swift */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 		38D7E343256E9AFD0018CBCE /* ChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				38EF18CC259A1C50003F72D8 /* Service */,
 				38EF18BD259A07C6003F72D8 /* Cell */,
 				38D7E349256E9B830018CBCE /* Controller */,
 				38D7E35D2570E77C0018CBCE /* View */,
@@ -215,6 +219,13 @@
 				38EF18C8259A0933003F72D8 /* KBChatRoomToCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		38EF18CC259A1C50003F72D8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		866D5E67D86E517498C436D7 /* Pods */ = {
@@ -363,6 +374,7 @@
 				38D7E33B256E99700018CBCE /* KBBaseController.swift in Sources */,
 				38D7E337256E98840018CBCE /* KBAppDelegate+Window.swift in Sources */,
 				38EF18C3259A0834003F72D8 /* KBChatRoomCell.swift in Sources */,
+				38EF18CE259A1C8E003F72D8 /* KBChatRoomService.swift in Sources */,
 				38EF18B3259A06C0003F72D8 /* KBChatRoomController+keyboard.swift in Sources */,
 				38EF18C6259A0922003F72D8 /* KBChatRoomFromCell.swift in Sources */,
 				38D7E33F256E9A3D0018CBCE /* KBBaseTableView.swift in Sources */,
