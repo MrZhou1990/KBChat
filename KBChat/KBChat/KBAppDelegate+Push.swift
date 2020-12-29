@@ -56,8 +56,23 @@ extension KBAppDelegate: UNUserNotificationCenterDelegate {
     // 程序在前台时收到提醒通知会调用此方法
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         let userInfo = notification.request.content.userInfo
-        print("推送内容22222\n", userInfo as! [String : Any])
-        completionHandler(.sound)
+//        guard let customData = userInfo["customData"] else {
+//            return
+//        }
+        guard let aps = userInfo["aps"] as? [String : Any] else {
+            return
+        }
+        guard let alert = aps["alert"] as? [AnyHashable : Any] else {
+            return
+        }
+        let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: (coreDataManager.managedObjectContext)!) as! Message
+        message.mId = "123"
+        message.content = "哈哈"
+        coreDataManager.saveContext()
+        
+        NotificationCenter.default.post(name: Notification.Name("apspush"), object: self, userInfo: alert)
+        
+        completionHandler(.alert)
     }
     
     // 点击推送进入会调用此方法
@@ -80,3 +95,6 @@ extension KBAppDelegate: UNUserNotificationCenterDelegate {
     
     
 }
+
+let coreDataManager = CoreDataManager.share()!
+

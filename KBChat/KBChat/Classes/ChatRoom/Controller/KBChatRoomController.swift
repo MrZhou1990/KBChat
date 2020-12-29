@@ -22,6 +22,8 @@ class KBChatRoomController: KBBaseController {
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("apspush"), object: nil)
+        print("聊天页销毁")
     }
     
     override func viewDidLoad() {
@@ -29,6 +31,7 @@ class KBChatRoomController: KBBaseController {
         title = "聊天室"
         buildUI()
         handleKeyboardNotification()
+        handleApsNotification()
     }
     
     /// 创建视图UI
@@ -70,6 +73,11 @@ class KBChatRoomController: KBBaseController {
     lazy var chatInputView: KBChatInputView = {
         let chatInputView = KBChatInputView.init(frame: CGRect.init(x: 0, y: view.height - chatInputViewHeight, width: view.width, height: chatInputViewHeight))
         return chatInputView
+    }()
+    
+    lazy var messageList: [String] = {
+        let messageList = [String]()
+        return messageList
     }()
 }
 

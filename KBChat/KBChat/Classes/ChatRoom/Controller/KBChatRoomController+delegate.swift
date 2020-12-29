@@ -9,13 +9,15 @@ import Foundation
 
 extension KBChatRoomController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !isScrollBottom {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
-                tableView.scrollToRow(at: IndexPath.init(item: 99, section: 0), at: .bottom, animated: false)
-            }
-            isScrollBottom = true
+        if messageList.count > 0 {
+            if !isScrollBottom {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
+                    tableView.scrollToRow(at: IndexPath.init(item: self.messageList.count - 1, section: 0), at: .bottom, animated: false)
+                }
+                isScrollBottom = true
+            }            
         }
-        return 100
+        return messageList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -25,7 +27,7 @@ extension KBChatRoomController: UITableViewDelegate, UITableViewDataSource {
             if toCell == nil {
                 toCell = KBChatRoomToCell.init(style: .default, reuseIdentifier: toIdentifier)
             }
-            toCell?.textLabel?.text = "哈哈\(indexPath.row)"
+            toCell?.textLabel?.text = messageList[indexPath.row]
             toCell?.textLabel?.textAlignment = .right
             toCell?.selectionStyle = .none
             return toCell!
@@ -35,7 +37,7 @@ extension KBChatRoomController: UITableViewDelegate, UITableViewDataSource {
         if fromCell == nil {
             fromCell = KBChatRoomFromCell.init(style: .default, reuseIdentifier: fromIdentifier)
         }
-        fromCell?.textLabel?.text = "哈哈\(indexPath.row)"
+        fromCell?.textLabel?.text = messageList[indexPath.row]
         fromCell?.selectionStyle = .none
         return fromCell!
     }

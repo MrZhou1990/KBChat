@@ -4,3 +4,4 @@
 
 
 #import <SDAutoLayout.h>
+#import "CoreDataManager.h"

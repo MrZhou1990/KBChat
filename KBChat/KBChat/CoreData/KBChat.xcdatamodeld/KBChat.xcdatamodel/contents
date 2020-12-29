@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="direction" optional="YES" attributeType="String"/>
+        <attribute name="isRead" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="String"/>
+        <attribute name="mId" optional="YES" attributeType="String"/>
+        <attribute name="receiveUserHeaderUrl" optional="YES" attributeType="String"/>
+        <attribute name="receiveUserId" optional="YES" attributeType="String"/>
+        <attribute name="receiveUsername" optional="YES" attributeType="String"/>
+        <attribute name="sendTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sendUserHeaderUrl" optional="YES" attributeType="String"/>
+        <attribute name="sendUserId" optional="YES" attributeType="String"/>
+        <attribute name="sendUsername" optional="YES" attributeType="String"/>
+        <attribute name="standby1" optional="YES" attributeType="String"/>
+        <attribute name="standby2" optional="YES" attributeType="String"/>
+        <attribute name="standby3" optional="YES" attributeType="String"/>
+        <attribute name="standby4" optional="YES" attributeType="String"/>
+        <attribute name="standby5" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Message" positionX="-54" positionY="-9" width="128" height="284"/>
+    </elements>
+</model>

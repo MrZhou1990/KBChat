@@ -12,16 +12,17 @@ class KBChatInputView: KBBaseView, UITextViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.red
         buildUI()
     }
     
     private func buildUI () {
-        addSubview(chatInputView)
-        chatInputView.sd_layout()?.spaceToSuperView(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
+        addSubview(safeBgView)
+        _ = safeBgView.sd_layout()?.topEqualToView(self)?.leftEqualToView(self)?.rightEqualToView(self)?.heightIs(50)
+        safeBgView.addSubview(chatInputView)
+        chatInputView.sd_layout()?.spaceToSuperView(UIEdgeInsets.init(top: 5, left: 10, bottom: 5, right: 10))
     }
     
     lazy var chatInputView: KBBaseTextView = {
@@ -34,6 +35,14 @@ class KBChatInputView: KBBaseView, UITextViewDelegate {
         return chatInputView
     }()
     
+    lazy var safeBgView: KBBaseView = {
+        let safeBgView = KBBaseView.init(frame: CGRect.zero)
+        return safeBgView
+    }()
+    
+}
+
+extension KBChatInputView {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             // 发送网络请求，将消息发送给服务器转发
@@ -42,5 +51,4 @@ class KBChatInputView: KBBaseView, UITextViewDelegate {
         }
         return true
     }
-    
 }
