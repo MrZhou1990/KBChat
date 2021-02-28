@@ -7,7 +7,13 @@
 
 import UIKit
 
+@objc protocol KBChatInputViewDelegate {
+    func handleSendMessage(_ message: String)
+}
+
 class KBChatInputView: KBBaseView, UITextViewDelegate {
+    
+    weak var kbDelegate: KBChatInputViewDelegate?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -18,7 +24,7 @@ class KBChatInputView: KBBaseView, UITextViewDelegate {
         buildUI()
     }
     
-    private func buildUI () {
+    private func buildUI() {
         addSubview(safeBgView)
         _ = safeBgView.sd_layout()?.topEqualToView(self)?.leftEqualToView(self)?.rightEqualToView(self)?.heightIs(50)
         safeBgView.addSubview(chatInputView)
@@ -27,9 +33,13 @@ class KBChatInputView: KBBaseView, UITextViewDelegate {
     
     lazy var chatInputView: KBBaseTextView = {
         let chatInputView = KBBaseTextView.init(frame: CGRect.zero, textContainer: nil)
-        chatInputView.backgroundColor = UIColor.yellow
+        if #available(iOS 13.0, *) {
+            chatInputView.backgroundColor = UIColor.systemGray
+        } else {
+            chatInputView.backgroundColor = UIColor.white
+        }
         chatInputView.layer.borderWidth = 1
-        chatInputView.layer.borderColor = UIColor.black.cgColor
+        chatInputView.layer.borderColor = UIColor.yellow.cgColor
         chatInputView.returnKeyType = .send
         chatInputView.delegate = self
         return chatInputView
@@ -47,6 +57,8 @@ extension KBChatInputView {
         if text == "\n" {
             // 发送网络请求，将消息发送给服务器转发
             KBChatRoomService.sendMessage(textView.text)
+            kbDelegate?.handleSendMessage(textView.text)
+            textView.text = ""
             return false
         }
         return true

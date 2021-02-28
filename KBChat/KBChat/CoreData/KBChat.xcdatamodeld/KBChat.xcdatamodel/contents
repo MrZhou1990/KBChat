@@ -6,6 +6,7 @@
         <attribute name="isRead" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="messageType" optional="YES" attributeType="String"/>
         <attribute name="mId" optional="YES" attributeType="String"/>
+        <attribute name="receiveTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="receiveUserHeaderUrl" optional="YES" attributeType="String"/>
         <attribute name="receiveUserId" optional="YES" attributeType="String"/>
         <attribute name="receiveUsername" optional="YES" attributeType="String"/>
@@ -20,6 +21,6 @@
         <attribute name="standby5" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Message" positionX="-54" positionY="-9" width="128" height="284"/>
+        <element name="Message" positionX="-54" positionY="-9" width="128" height="299"/>
     </elements>
 </model>

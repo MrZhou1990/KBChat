@@ -11,7 +11,6 @@ class KBBaseTableView: UITableView {
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        backgroundColor = UIColor.white
         tableFooterView = UIView()
         separatorStyle = .none
         

@@ -30,6 +30,7 @@ class KBChatRoomController: KBBaseController {
         super.viewDidLoad()
         title = "聊天室"
         buildUI()
+        handleMessageData()
         handleKeyboardNotification()
         handleApsNotification()
     }
@@ -62,6 +63,11 @@ class KBChatRoomController: KBBaseController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
+        if #available(iOS 13.0, *) {
+            chatTableView.backgroundColor = UIColor.systemGray5
+        } else {
+            chatTableView.backgroundColor = UIColor.white
+        }
         return chatTableView
     }()
     
@@ -72,12 +78,31 @@ class KBChatRoomController: KBBaseController {
     /// 输入框
     lazy var chatInputView: KBChatInputView = {
         let chatInputView = KBChatInputView.init(frame: CGRect.init(x: 0, y: view.height - chatInputViewHeight, width: view.width, height: chatInputViewHeight))
+        chatInputView.kbDelegate = self
         return chatInputView
     }()
     
-    lazy var messageList: [String] = {
-        let messageList = [String]()
+    /// 聊天数据数组
+    lazy var messageList: [KBMsgBody] = {
+        let messageList = [KBMsgBody]()
         return messageList
     }()
+    
+    /// 从本地数据库中取出聊天数据处理
+    private func handleMessageData() {
+    }
+}
+
+extension KBChatRoomController: KBChatInputViewDelegate {
+    
+    func handleSendMessage(_ message: String) {
+        let msg = KBMsgBody()
+        msg.content = message
+        msg.time = Date().dateToStringWithFormatter("YYYY-MM-DD HH:mm:ss")
+        msg.direction = "to"
+        messageList.append(msg)
+        chatTableView.reloadData()
+        chatTableView.scrollToRow(at: IndexPath.init(row: messageList.count - 1, section: 0), at: .bottom, animated: true)
+    }
 }
 

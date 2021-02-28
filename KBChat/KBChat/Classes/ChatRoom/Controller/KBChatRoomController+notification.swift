@@ -17,10 +17,12 @@ extension KBChatRoomController {
         guard let userInfo = notificatin.userInfo else {
             return
         }
-        guard let body = userInfo["body"] as? String else {
-            return
-        }
-        messageList.append(body)
+        let msg = KBMsgBody()
+        msg.content = userInfo["subTitle"] as? String
+        msg.time = userInfo["sendTime"] as? String
+        msg.direction = "from"
+        messageList.append(msg)
         chatTableView.reloadData()
+        chatTableView.scrollToRow(at: IndexPath.init(row: messageList.count - 1, section: 0), at: .bottom, animated: true)
     }
 }

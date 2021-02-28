@@ -39,18 +39,19 @@ extension KBAppDelegate: UNUserNotificationCenterDelegate {
         let tokenComponents = token.map { data in String(format: "%02.2hhx", data) }
         let deviceTokenString = tokenComponents.joined()
         print("token: ", deviceTokenString)
-        let queryItems = [URLQueryItem(name: "deviceToken", value: deviceTokenString)]
-        var urlComps = URLComponents(string: "www.example.com/register")!
-        urlComps.queryItems = queryItems
-        guard let url = urlComps.url else {
-            return
-        }
-
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            // Handle data
-        }
-
-        task.resume()
+        KBToolUtils.shareInstance.token = deviceTokenString
+//        let queryItems = [URLQueryItem(name: "deviceToken", value: deviceTokenString)]
+//        var urlComps = URLComponents(string: "www.example.com/register")!
+//        urlComps.queryItems = queryItems
+//        guard let url = urlComps.url else {
+//            return
+//        }
+//
+//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+//            // Handle data
+//        }
+//
+//        task.resume()
     }
     
     // 程序在前台时收到提醒通知会调用此方法
@@ -59,18 +60,12 @@ extension KBAppDelegate: UNUserNotificationCenterDelegate {
 //        guard let customData = userInfo["customData"] else {
 //            return
 //        }
-        guard let aps = userInfo["aps"] as? [String : Any] else {
+        guard let data = userInfo["data"] as? [String : Any] else {
             return
         }
-        guard let alert = aps["alert"] as? [AnyHashable : Any] else {
-            return
-        }
-        let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: (coreDataManager.managedObjectContext)!) as! Message
-        message.mId = "123"
-        message.content = "哈哈"
-        coreDataManager.saveContext()
+       
         
-        NotificationCenter.default.post(name: Notification.Name("apspush"), object: self, userInfo: alert)
+        NotificationCenter.default.post(name: Notification.Name("apspush"), object: self, userInfo: data)
         
         completionHandler(.alert)
     }
@@ -96,5 +91,4 @@ extension KBAppDelegate: UNUserNotificationCenterDelegate {
     
 }
 
-let coreDataManager = CoreDataManager.share()!
 

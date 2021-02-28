@@ -24,8 +24,8 @@ extension KBChatRoomController {
         }
         let keyboardHeight = keyboardRectValue.size.height
         // 设置tableView内部滚动区域
-        chatTableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardHeight + navigationHeight, right: 0)
-        chatTableView.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardHeight + navigationHeight, right: 0)
+        chatTableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardHeight/* + navigationHeight*/, right: 0)
+        chatTableView.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: keyboardHeight/* + navigationHeight*/, right: 0)
         
         UIView.animate(withDuration: 0.3) {
             self.chatInputView.y = self.view.height - keyboardHeight - chatInputViewHeight
