@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381B9A1E25EDD03D00D6ED48 /* KBURLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B9A1D25EDD03D00D6ED48 /* KBURLConfig.swift */; };
 		384AFB46259D92C5001BFAE2 /* KBBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB45259D92C5001BFAE2 /* KBBaseLabel.swift */; };
 		384AFB49259D965E001BFAE2 /* KBBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB48259D965E001BFAE2 /* KBBaseImageView.swift */; };
 		385410462591E4A50040E5E6 /* KBAppDelegate+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		23E568BD667A9BBFD24B78DC /* Pods-KBChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBChat.release.xcconfig"; path = "Target Support Files/Pods-KBChat/Pods-KBChat.release.xcconfig"; sourceTree = "<group>"; };
+		381B9A1D25EDD03D00D6ED48 /* KBURLConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBURLConfig.swift; sourceTree = "<group>"; };
 		384AFB45259D92C5001BFAE2 /* KBBaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBBaseLabel.swift; sourceTree = "<group>"; };
 		384AFB48259D965E001BFAE2 /* KBBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBBaseImageView.swift; sourceTree = "<group>"; };
 		385410452591E4A50040E5E6 /* KBAppDelegate+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KBAppDelegate+Push.swift"; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381B9A1C25EDD01700D6ED48 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				381B9A1D25EDD03D00D6ED48 /* KBURLConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		3863BF2F2593258500974C3D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 				38D7E339256E99440018CBCE /* Base */,
 				38EF18AA25947D2B003F72D8 /* Category */,
 				38D7E341256E9AD40018CBCE /* Classes */,
+				381B9A1C25EDD01700D6ED48 /* Config */,
 				38EF18D7259B20F1003F72D8 /* CoreData */,
 				38D7E332256E97EF0018CBCE /* Others */,
 				3863BF2F2593258500974C3D /* Resources */,
@@ -198,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				38D7E344256E9B3B0018CBCE /* Controller */,
-				38EF18CD259A1C8E003F72D8 /* KBChatRoomService.swift */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 		38EF18CC259A1C50003F72D8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				38EF18CD259A1C8E003F72D8 /* KBChatRoomService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -421,6 +432,7 @@
 				384AFB49259D965E001BFAE2 /* KBBaseImageView.swift in Sources */,
 				385410462591E4A50040E5E6 /* KBAppDelegate+Push.swift in Sources */,
 				386814CC25EA97960057D5A4 /* KBToolUtils.swift in Sources */,
+				381B9A1E25EDD03D00D6ED48 /* KBURLConfig.swift in Sources */,
 				38EF18D2259AEA3B003F72D8 /* KBChatRoomController+notification.swift in Sources */,
 				38D7E31F256E96000018CBCE /* KBViewController.swift in Sources */,
 				38D7E3632570E7B50018CBCE /* KBChatInputView.swift in Sources */,
@@ -587,16 +599,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KBChat/KBChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24FS7QD68Q;
+				DEVELOPMENT_TEAM = N35GHVACK5;
 				INFOPLIST_FILE = KBChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.znzl.mytest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.mrzhou.test666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KBChat/KBChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -612,16 +626,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KBChat/KBChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24FS7QD68Q;
+				DEVELOPMENT_TEAM = N35GHVACK5;
 				INFOPLIST_FILE = KBChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.znzl.mytest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.mrzhou.test666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KBChat/KBChat-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
